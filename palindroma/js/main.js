@@ -2,16 +2,23 @@
 
 
 // CHIEDERE PAROLA AD UTENTE
-const parolaUtente = prompt('Inserisci una parola');
+const parolaInserita = prompt('Inserisci una parola');
 
-// console.log("La tua parola è:" + " " + parolaUtente);
+// console.log("La tua parola è:" + " " + parolaInserita);
 
+// CONDIZIONE PER CONFRONTARE SE PAROLA INIZIALE CON PAROLA INVERTITA COMBACIANO
+const parolaUtenteInversa = invertiParola(parolaInserita);
 
+if(parolaInserita === parolaUtenteInversa){
+  console.log('la parola è palindroma');
+} else {
+  console.log('la parola non è palindroma');
+}
 
 // FUNZIONE DI VERIFICA SE LA PAROLA E' PALINDROMA
-function inverti(palindroma) {
+function invertiParola(palindroma) {
   // DIVIDIAMO LA PAROLA, LA INVERTIAMO E LA RIUNIAMO
-  const parolaInversa = palindroma.split('').reverse().join('');
-  return parolaInversa;
+  const parolaInvertita = palindroma.split('').reverse().join('');
+  return parolaInvertita;
 }
 
