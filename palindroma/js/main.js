@@ -4,7 +4,14 @@
 // CHIEDERE PAROLA AD UTENTE
 const parolaUtente = prompt('Inserisci una parola');
 
-console.log("La tua parola è:" + " " + parolaUtente);
+// console.log("La tua parola è:" + " " + parolaUtente);
 
-// VERIFICARE SE LA PAROLA E' PALINDROMA
+
+
+// FUNZIONE DI VERIFICA SE LA PAROLA E' PALINDROMA
+function inverti(palindroma) {
+  // DIVIDIAMO LA PAROLA, LA INVERTIAMO E LA RIUNIAMO
+  const parolaInversa = palindroma.split('').reverse().join('');
+  return parolaInversa;
+}
 
