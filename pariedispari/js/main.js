@@ -9,14 +9,28 @@ console.log('Il tuo numero è', numUtente);
 
 // SOMMARE I DUE NUMERI (USER + RANDOM PC)
 const numeroPc = numRandom();
-console.log('Il numero del pc è', numRandom());
+console.log('Il numero del pc è', numeroPc);
 
-let sommaNum = numUtente + numeroPc;
-console.log('La somma dei due numeri è', sommaNum);
-let risultatoFinale = pariDispari(sommaNum);
+// SOMMA
+let sommaNumeri = numUtente + numeroPc;
+console.log('La somma dei due numeri è', sommaNumeri);
 
-// OUTPUT VINCITORE
+// VERIFICA SOMMA PARI O DISPARI
+let risultatoFinale = pariDispari(sommaNumeri);
 
+// OUTPUT VINTO
+if (scelta === "pari" && risultatoFinale === true){
+  console.log("Complimenti, hai vinto!");
+} 
+else if (scelta === "dispari" && risultatoFinale === false){
+  console.log("Complimenti, hai vinto!")
+}
+// OUTPUT PERSO
+ else {
+  console.log("Mi dispiace, hai perso");
+}
+
+// FUNZIONI-------------------------------------------------------
 // GENERARE NUMERO RANDOM PC DA 1 A 5 (CON FUNZIONE)
 function numRandom(min, max) {
   min = 1;
@@ -24,7 +38,7 @@ function numRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// STABILIRE SE SOMMA E' PARI O DISPARI (CON FUNZIONE)
+// STABILIRE SE PARI O DISPARI (CON FUNZIONE)
 function pariDispari(somma) {
   if (somma % 2 === 0) {
     console.log("il risultato è pari");
