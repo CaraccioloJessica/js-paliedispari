@@ -4,7 +4,15 @@
 const scelta = prompt("Scegli pari o dispari");
 const numUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
 
-// SOMMARE I DUE NUMERI
+console.log('Hai scelto', scelta);
+console.log('Il tuo numero è', numUtente);
+
+// SOMMARE I DUE NUMERI (USER + RANDOM PC)
+const numeroPc = numRandom();
+console.log('Il numero del pc è', numRandom());
+
+let sommaNum = numUtente + numeroPc;
+console.log('La somma dei due numeri è', sommaNum);
 
 // OUTPUT VINCITORE
 
@@ -16,5 +24,6 @@ function numRandom(min, max) {
 }
 
 // STABILIRE SE SOMMA E' PARI O DISPARI (CON FUNZIONE)
+
 
 
