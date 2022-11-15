@@ -4,11 +4,17 @@
 const scelta = prompt("Scegli pari o dispari");
 const numUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
 
-// GENERARE NUMERO RANDOM PC DA 1 A 5
-
 // SOMMARE I DUE NUMERI
 
-// STABILIRE SE SOMMA E' PARI O DISPARI
-
 // OUTPUT VINCITORE
+
+// GENERARE NUMERO RANDOM PC DA 1 A 5  (CON FUNZIONE)
+function numRandom(min, max) {
+  min = 1;
+  max = 5;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// STABILIRE SE SOMMA E' PARI O DISPARI (CON FUNZIONE)
+
 
